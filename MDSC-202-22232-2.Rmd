@@ -1,0 +1,199 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+#### Pavan Pyla 
+
+#### 22232 
+
+## Matrix Multiplication and Matrix Inverse's
+
+```{r}
+# R program to create a matrix
+m <- matrix(1:8, nrow=2)
+print(m)
+```
+
+```{r}
+solve(m)
+```
+
+```{r}
+
+# R program for matrix multiplication
+# with a scalar
+m <- matrix(1:8, nrow=2)
+m <- 2*m  
+print(m)
+```
+
+```{r}
+solve(2*m)
+```
+
+```{r}
+
+# R program for matrix multiplication
+ 
+# Creating matrices
+m <- matrix(1:9, nrow=2)
+n <- matrix(8:17, nrow=2)
+ 
+# Multiplying matrices
+print(m*n)
+```
+
+```{r}
+
+```
+
+```{r}
+# Creating matrix
+m <- matrix(1:8, nrow=2)  
+ 
+# Creating a vector
+vec <- 1:2
+ 
+# Multiplying matrix with vector
+print(vec*m)
+```
+
+```{r}
+m <- matrix(1:8, nrow=2)
+n <- matrix(8:15, nrow=4)
+k=m %*% n
+# Multiplying matrices using operator
+print(m %*% n)
+```
+
+```{r}
+solve(k)
+```
+
+```{r}
+x <- 1:4
+(z <- x %*% x)    # scalar ("inner") product (1 x 1 matrix)
+drop(z)           # as scalar
+
+y <- diag(x)
+z <- matrix(1:12, ncol = 3, nrow = 4)
+y %*% z
+y %*% x
+x %*% z
+```
+
+```{r}
+data <- c(1, 2, 3, 0, 1, 2, 0, 0, 1)
+A <- matrix(data, nrow = 3, ncol = 3)
+
+data <- c(0, 1, 1, 1, 0, 3, 1, 3, 3)
+B <- matrix(data, nrow = 3, ncol = 3)
+
+
+AB <- A %*% B
+
+print("Matrix A")
+print(A)
+print("Matrix B")
+print(B)
+
+```
+
+```{r}
+print("Matrix Multiplication Result")
+print(AB)
+```
+
+```{r}
+ a=matrix(c(1,5,3,8), ncol=2, nrow=2)
+     
+```
+
+```{r}
+b = matrix(c(2,4,6,8), ncol=2, nrow=2)
+b
+```
+
+```{r}
+print(a*b)
+```
+
+```{r}
+ gt = matrix(c(15,20,25,15,20,25,15,20,25), ncol=3, nrow=3)
+ gt
+ m = matrix(c(35,26,18,30,25,17,37,28,20), ncol=3, nrow=3)
+ m
+ 
+```
+
+```{r}
+p=gt*m
+```
+
+```{r}
+solve(p)
+```
+
+## Eigen Values of Matrices
+
+```{r}
+# R program to illustrate 
+# Eigenvalues and eigenvectors of matrix 
+    
+# Create a 3x3 matrix 
+A = matrix(c(1:9), 3, 3) 
+  
+cat("The 3x3 matrix:\n") 
+print(A) 
+    
+# Calculating Eigenvalues and eigenvectors 
+print(eigen(A)) 
+```
+
+```{r}
+# Create a 3x3 matrix 
+A = matrix(c(2, 3, 5, 1), 2, 2) 
+A 
+    
+# Calculating Eigenvalues and eigenvectors 
+print(eigen(A)) 
+```
+
+```{r}
+entries <- c(    0,       0,      0,   0.45,
+              0.92,    0.86,      0,      0,
+                 0,    0.08,    0.8,   0.83,
+                 0,    0.02,   0.19,      0)
+```
+
+```{r}
+right_whale <- matrix(entries, nrow=4, byrow=TRUE)
+right_whale
+```
+
+```{r}
+eigen <- eigen(right_whale)
+eigen 
+```
+
+```{r}
+A <- as.matrix(data.frame(c(1,-1,0),c(1,2,1),c(-2,1,-1)))
+A
+```
+
+```{r}
+e <- eigen(A)
+e$values
+```
+
+```{r}
+A <- matrix(c(13, -4, 2, -4, 11, -2, 2, -2, 8), 3, 3, byrow=TRUE)
+A
+```
+
+```{r}
+ev <- eigen(A)
+# extract components
+(values <- ev$values)
+```
